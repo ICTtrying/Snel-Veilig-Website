@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Mail\ContactMail;
-use App\Http\Middleware\ContactThrottle;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Cache;
@@ -19,18 +18,32 @@ class MailController extends Controller
             'bericht' => 'nullable|string',
         ]);
 
-        //telefoon nummer formateren voor layout mail
-        $data['telefoon'] = phone($data['telefoon'], 'NL')
-            ->formatE164();
+        // Telefoonnummer formatteren
+        if (!empty($data['telefoon'])) {
+            $data['telefoon'] = phone($data['telefoon'], 'NL')->formatE164();
+        }
 
+        // Mail versturen
+        Mail::to('wesleyborgman@gmail.com')->send(new ContactMail($data));
 
-        //mail versturen
-        Mail::to('wesleyborgman@gmail.com')
-            ->send(new ContactMail($data));
+        // Throttle instellen (bijv. 300 seconden = 5 minuten)
+        $cooldownSeconds = 300;
+        $ip = $request->ip();
 
-        // throttle pas zetten NA succesvolle mail 
-        Cache::put('contact_throttle_' . $request->ip(), true, 60);
+        // Expiratietijd berekenen
+        $expiresAt = now()->addSeconds($cooldownSeconds);
 
-        return back()->with('success', 'Bericht verzonden');
+        // Throttle opslaan met timestamp
+        Cache::put("contact_throttle_$ip", $expiresAt, $cooldownSeconds);
+
+        // Success message opslaan (zelfde duur)
+        Cache::put(
+            "contact_success_message_$ip",
+            'Bericht verzonden! We nemen spoedig contact met u op!',
+            $cooldownSeconds
+        );
+
+        // Geen flash message meer — middleware toont success zolang throttle actief is
+        return back();
     }
 }

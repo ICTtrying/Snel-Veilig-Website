@@ -3,29 +3,57 @@
 @section('title', 'Snel & veilig')
 
 @section('content')
-    @if (session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
-    @endif
-
-
     <div class="top-half-image position-relative">
-        <div class="darkOverlay"></div>
-        <div class="tekstContainerDarkOverlay">
-            <h1 style="color: #f8f9fa;">Contact</h1>
-            <p style="font-size: 1.1rem; color: #f8f9fa; margin-top: 10px;">
-                Neem contact op voor een gratis proefles of meer informatie.<br>
-                Wij reageren snel op je aanvraag!
-            </p>
-            <p>
-                <b>Bel:</b> <a href="tel:+31619666642"
-                    style="white-space: nowrap; color: rgb(0, 140, 255); text-decoration: none;"><b>+31 6
-                        19666642</b></a><br>
-                <b>of mail:</b> <a href="mailto:info@rijschoolsnelenveilig.nl"
-                    style="color: rgb(0, 140, 255); text-decoration: none;">info@rijschoolsnelenveilig.nl</a>
-            </p>
-        </div>
+        @php
+            $cacheSuccess = \Illuminate\Support\Facades\Cache::has('contact_success_message_' . request()->ip());
+        @endphp
+        @if (session('success') || $cacheSuccess)
+            @if (session('success') || $cacheSuccess)
+                <div class="darkOverlay"></div>
+                <div class="tekstContainerDarkOverlay">
+                    <div class="alert alert-success d-flex flex-column justify-content-center align-items-center shadow-lg p-4 rounded-4"
+                        style="min-height: 220px; font-size: 1.25rem; background: linear-gradient(135deg, #e0ffe7 0%, #b2f7c1 100%); border: 2.5px solid #28a745; box-shadow: 0 6px 32px rgba(40,167,69,0.18); max-width: 540px; margin: 0 auto;">
+                        <div class="d-flex align-items-center mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="#28a745" class="me-3"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM7 11.414l5.207-5.207-1.414-1.414L7 8.586 5.207 6.793 3.793 8.207 7 11.414z" />
+                            </svg>
+                            <div>
+                                <div class="fw-bold mb-1" style="color: #155724; font-size: 1.5rem;">Bedankt voor je
+                                    bericht!</div>
+                                <div style="color: #155724; font-size: 1.1rem;">We hebben je aanvraag goed ontvangen.</div>
+                            </div>
+                        </div>
+                        <div class="text-center" style="color: #155724;">
+                            <p class="mb-2">we nemen zo snel mogelijk contact met je op.<br>
+                                Je ontvangt binnen 24 uur een reactie per e-mail of telefoon.</p>
+                            <a href="tel:+31619666642" class="btn btn-outline-success btn-sm me-2"
+                                style="font-weight: 500;">Bel ons</a>
+                            <a href="mailto:info@rijschoolsnelenveilig.nl" class="btn btn-outline-success btn-sm"
+                                style="font-weight: 500;">Mail ons</a>
+                        </div>
+                    </div>
+                </div>
+            @endif
+        @else
+            <div class="darkOverlay"></div>
+            <div class="tekstContainerDarkOverlay">
+                <h1 style="color: #f8f9fa;">Contact</h1>
+                <p style="font-size: 1.1rem; color: #f8f9fa; margin-top: 10px;">
+                    Neem contact op voor een gratis proefles of meer informatie.<br>
+                    Wij reageren snel op je aanvraag!
+                </p>
+                <p>
+                    <b>Bel:</b> <a href="tel:+31619666642"
+                        style="white-space: nowrap; color: rgb(0, 140, 255); text-decoration: none;"><b>+31 6
+                            19666642</b></a><br>
+                    <b>of mail:</b> <a href="mailto:info@rijschoolsnelenveilig.nl"
+                        style="color: rgb(0, 140, 255); text-decoration: none;">info@rijschoolsnelenveilig.nl</a>
+                </p>
+            </div>
+        @endif
+
     </div>
 
     <section class="section2 bg-dark clamp-padding-section">
