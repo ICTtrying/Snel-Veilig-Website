@@ -5,7 +5,7 @@
 	<table style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
 		<tr>
 			<td style="padding: 8px 0; color: #555;"><strong>Email:</strong></td>
-			<td style="padding: 8px 0; color: #333;"><a href="mailto:{{ $data['email'] }}"></a>{{ $data['email'] }}</td>
+			<td style="padding: 8px 0; color: #333;"><a href="mailto:{{ $data['email'] }}">{{ $data['email'] }}</a></td>
 		</tr>
 		@if(!empty($data['telefoon']))
 		<tr>

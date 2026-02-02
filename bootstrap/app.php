@@ -11,7 +11,10 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        $middleware->alias([
+            'contactThrottle' => \App\Http\Middleware\ContactThrottle::class,
+        ]);
+
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

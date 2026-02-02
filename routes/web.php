@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\RouteController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MailController;
 
 Route::controller(RouteController::class)->group(function () {
     Route::get('/', 'index')->name('home');
@@ -13,4 +13,5 @@ Route::controller(RouteController::class)->group(function () {
 });
 
 Route::post('/contact', [MailController::class, 'send'])
+    ->middleware('contactThrottle')
     ->name('contact.send');

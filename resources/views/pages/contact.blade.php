@@ -8,6 +8,8 @@
             {{ session('success') }}
         </div>
     @endif
+
+
     <div class="top-half-image position-relative">
         <div class="darkOverlay"></div>
         <div class="tekstContainerDarkOverlay">
@@ -33,21 +35,42 @@
                 <form action="{{ route('contact.send') }}" method="post"
                     class="bg-dark p-4 rounded-4 border border-secondary contact-formulier">
                     @csrf
+
+                    @if ($errors->has('ThrottleError'))
+                        <div class="alert alert-danger mb-3">
+                            {{ $errors->first('ThrottleError') }}
+                        </div>
+                    @endif
                     <div class="form-group mb-3">
                         <label for="naam">Naam</label>
-                        <input type="text" class="form-control" id="naam" name="naam" required>
+                        <input type="text" class="form-control" id="naam" name="naam" required
+                            value="{{ old('naam') }}">
+                        @error('naam')
+                            <div class="text-danger small mt-1">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-group mb-3">
                         <label for="email">E-mail</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
+                        <input type="email" class="form-control" id="email" name="email" required
+                            value="{{ old('email') }}">
+                        @error('email')
+                            <div class="text-danger small mt-1">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-group mb-3">
                         <label for="telefoon">Telefoonnummer <small>!optioneel</small></label>
-                        <input type="tel" class="form-control" id="telefoon" name="telefoon">
+                        <input type="tel" class="form-control" id="telefoon" name="telefoon"
+                            value="{{ old('telefoon') }}">
+                        @error('telefoon')
+                            <div class="text-danger small mt-1">Geen geldig telefoonnummer formaat</div>
+                        @enderror
                     </div>
                     <div class="form-group mb-3">
                         <label for="bericht">Bericht <small>!optioneel</small></label>
-                        <textarea class="form-control" id="bericht" name="bericht" rows="4" required></textarea>
+                        <textarea class="form-control" id="bericht" name="bericht" rows="4">{{ old('bericht') }}</textarea>
+                        @error('bericht')
+                            <div class="text-danger small mt-1">{{ $message }}</div>
+                        @enderror
                     </div>
                     <button type="submit" class="linkButton mt-3">Verzenden <svg xmlns="http://www.w3.org/2000/svg"
                             width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
