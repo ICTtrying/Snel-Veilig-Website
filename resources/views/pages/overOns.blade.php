@@ -1,0 +1,207 @@
+@extends('layout.app')
+
+@section('title', 'Snel & veilig')
+
+@section('content')
+    <div
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 0; pointer-events: none; overflow: hidden;">
+        <svg width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg" style="width: 100%; height:100vh;">
+            <defs>
+                <linearGradient id="bg-gradient" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#0d1b2a" />
+                    <stop offset="100%" stop-color="#274472" />
+                </linearGradient>
+                <radialGradient id="radial1" cx="80%" cy="10%" r="80%">
+                    <stop offset="0%" stop-color="#00b4d8" stop-opacity="0.25" />
+                    <stop offset="100%" stop-color="#0d1b2a" stop-opacity="0" />
+                </radialGradient>
+                <radialGradient id="radial2" cx="20%" cy="80%" r="70%">
+                    <stop offset="0%" stop-color="#90e0ef" stop-opacity="0.18" />
+                    <stop offset="100%" stop-color="#0d1b2a" stop-opacity="0" />
+                </radialGradient>
+            </defs>
+            <rect width="1920" height="1080" fill="url(#bg-gradient)" />
+            <ellipse cx="1700" cy="200" rx="600" ry="300" fill="url(#radial1)" />
+            <ellipse cx="400" cy="900" rx="500" ry="250" fill="url(#radial2)" />
+            <path d="M0,900 Q600,800 1200,1000 T1920,900 L1920,1080 L0,1080 Z" fill="#1b263b" fill-opacity="0.18" />
+            <path d="M0,200 Q800,100 1920,300 L1920,0 L0,0 Z" fill="#1b263b" fill-opacity="0.12" />
+        </svg>
+    </div>
+
+    <section class="section2 clamp-padding-section">
+        <h2>Over Ons!</h2>
+        <hr class="mb-5">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <p>
+                    Rijschool Snel & Veilig: persoonlijke rijlessen, ervaren instructeurs, en snel je rijbewijs halen
+                    met vertrouwen.
+                </p>
+                <p>
+                    <b>Locaties:</b> <span style="color: rgb(96, 184, 255);">Amsterdam, Amstelveen, Hoofddorp,
+                        Nieuw-Vennep, Haarlem, Zandvoort</span>
+                </p>
+                <p>
+                    vragen? bel naar: <a href="tel:+31619666642"
+                        style="white-space: nowrap; color: rgb(0, 140, 255); text-decoration: none;"><b>+31 6
+                            19666642</b></a>
+                    <br>
+                    <span>of email naar: <a href="mailto:info@rijschoolsnelenveilig.nl"
+                            style="color: rgb(0, 140, 255); text-decoration: none;">info@rijschoolsnelenveilig.nl</a></span>
+                </p>
+                <a href="{{ route('pakketten.index') }}" class="linkButton" role="button">Zie pakketten</a>
+            </div>
+            <div class="col-6">
+                <img class="clamp-img hide-when-small rounded-4" src="{{ asset('images/girl-looking-in-car.jpeg') }}"
+                    alt="foto van rijdende leerling">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section2 bg-dark clamp-padding-section">
+        <div class="Scale-animate hidden">
+            <h2>Lessen in het examengebied!</h2>
+            <small class="mt-3">Over ons</small>
+            <hr>
+            <br>
+            <p>
+                Bij Rijschool Snel & Veilig rijd je direct op de examenroutes waar je straks ook je praktijkexamen doet.
+                Zo raak je vertrouwd met de echte examenwegen en weet je precies wat je kunt verwachten. Dit is veel
+                effectiever dan bij andere rijscholen waar je vaak alleen wordt opgehaald en niet op de examenroutes
+                rijdt. Zo ben je optimaal voorbereid en vergroot je jouw kans om in één keer te slagen!
+            </p>
+
+            <p>
+                Rijlessen met plezier en vertrouwen! <br> Neem contact op voor meer informatie of een proefles.<br>
+            </p>
+
+
+            <a href="{{ route('pakketten.index') }}" class="linkButton" role="button">Zie pakketten</a>
+        </div>
+    </section>
+
+    <section class="section2 overflow-hidden clamp-padding-section">
+        <div class="container-fluid px-0">
+            <h2 class="text-center">Wat klanten over ons denken:</h2>
+            <div class="row justify-content-center g-3" style="color: black;">
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center card-animate  hidden mb-4">
+                    <div class="card card-review" style="width: 18rem;">
+                        <img class="card-img-top" src="images/leerlingen/leerling1.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bold">Allisha</h5>
+                            <span>review:
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                            </span>
+                            <hr>
+
+                            <p class="card-text">Ik heb mijn rijbewijs in één keer gehaald dankzij de fijne lessen en
+                                duidelijke uitleg. Super tevreden!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4 card-animate2 hidden">
+                    <div class="card card-review" style="width: 18rem;">
+                        <img class="card-img-top" src="images/leerlingen/leerling2.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bold">Younes</h5>
+                            <span>review:
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                            </span>
+                            <hr>
+                            <p class="card-text">Goede begeleiding en altijd duidelijke uitleg. Ik voelde me op mijn
+                                gemak tijdens de lessen en heb veel geleerd!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4 card-animate3 hidden">
+                    <div class="card card-review" style="width: 18rem;">
+                        <img class="card-img-top" src="images/leerlingen/leerling3.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bolder">Benjamin</h5>
+                            <span>review:
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                            </span>
+                            <hr>
+                            <p class="card-text">De instructeur was altijd geduldig en gaf handige tips. Dankzij Snel &
+                                Veilig heb ik met vertrouwen mijn examen gehaald!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection
