@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Snel & veilig')
+@section('title', 'Over ons')
 
 @section('content')
     <div

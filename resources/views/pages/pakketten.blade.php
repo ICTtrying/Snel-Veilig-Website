@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Snel & veilig')
+@section('title', 'Pakketten')
 
 @section('content')
     <div class="top-half-image">
