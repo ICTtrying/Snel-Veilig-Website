@@ -90,7 +90,6 @@
                     <div class="card card-review" style="width: 18rem;">
                         <img class="card-img-top" src="images/leerlingen/leerling1.jpeg" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title font-weight-bold">Allisha</h5>
                             <span>review:
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
                                     class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -129,7 +128,6 @@
                     <div class="card card-review" style="width: 18rem;">
                         <img class="card-img-top" src="images/leerlingen/leerling2.jpeg" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title font-weight-bold">Younes</h5>
                             <span>review:
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
                                     class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -167,7 +165,6 @@
                     <div class="card card-review" style="width: 18rem;">
                         <img class="card-img-top" src="images/leerlingen/leerling3.jpeg" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title font-weight-bolder">Benjamin</h5>
                             <span>review:
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
                                     class="bi bi-star-fill" viewBox="0 0 16 16">

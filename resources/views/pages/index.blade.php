@@ -341,4 +341,123 @@
             </div>
         </div>
     </section>
+    <section class="section2 bg-dark overflow-hidden clamp-padding-section">
+        <div class="container-fluid px-0">
+            <h2 class="text-center">Wat klanten over ons denken:</h2>
+            <div class="row justify-content-center g-3" style="color: black;">
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center card-animate  hidden mb-4">
+                    <div class="card card-review" style="width: 18rem;">
+                        <img class="card-img-top" src="images/leerlingen/leerling1.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                            <span>review:
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                            </span>
+                            <hr>
+
+                            <p class="card-text">Ik heb mijn rijbewijs in één keer gehaald dankzij de fijne lessen en
+                                duidelijke uitleg. Super tevreden!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4 card-animate2 hidden">
+                    <div class="card card-review" style="width: 18rem;">
+                        <img class="card-img-top" src="images/leerlingen/leerling2.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                            <span>review:
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                            </span>
+                            <hr>
+                            <p class="card-text">Goede begeleiding en altijd duidelijke uitleg. Ik voelde me op mijn
+                                gemak tijdens de lessen en heb veel geleerd!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4 card-animate3 hidden">
+                    <div class="card card-review" style="width: 18rem;">
+                        <img class="card-img-top" src="images/leerlingen/leerling3.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                            <span>review:
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                            </span>
+                            <hr>
+                            <p class="card-text">De instructeur was altijd geduldig en gaf handige tips. Dankzij Snel &
+                                Veilig heb ik met vertrouwen mijn examen gehaald!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 @endsection
