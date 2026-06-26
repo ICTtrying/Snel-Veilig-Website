@@ -49,7 +49,7 @@
 
     <section class="section2 pb-5 pt-5 bg-dark">
         <div class="container slide-left-animate hidden">
-            <h2>Leren op examenwegenn!</h2>
+            <h2>Leren op examenwegen!!</h2>
             <small class="mt-5">Over Snel & Veilig</small>
             <hr>
             <br>
