@@ -3,7 +3,7 @@
          <div class="row align-items-center">
              <div class="col-md-6 mb-3 mb-md-0">
                  <img src="images/logo.jpg" alt="logo" width="200" height="55">
-                 <p class="mb-1">Amsterdam, Amstelveen, Hoofddorp, Nieuw-Vennep, Haarlem, Zandvoort</p>
+                 <p class="mb-1">Amsterdam, Amstelveen, Haarlem, Hoofddorp</p>
                  <p>
                      vragen? bel naar: <a href="tel:+31619666642"
                          style="white-space: nowrap; color: rgb(0, 63, 115); text-decoration: none;"><b>+31 6

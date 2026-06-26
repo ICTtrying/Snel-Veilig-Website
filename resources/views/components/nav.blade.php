@@ -15,7 +15,7 @@
                     <a class="nav-link{{ request()->routeIs('home') ? ' active' : '' }}" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item me-3">
-                    <a class="nav-link{{ request()->routeIs('overOns.index') ? ' active' : '' }}" href="{{ route('overOns.index') }}">Over Ons</a>
+                    <a class="nav-link{{ request()->routeIs('overOns.index') ? ' active' : '' }}" href="{{ route('overOns.index') }}">Over mij</a>
                 </li>
                 <li class="nav-item me-3">
                     <a class="nav-link{{ request()->routeIs('pakketten.index') ? ' active' : '' }}" href="{{ route('pakketten.index') }}">Pakketten</a>

@@ -22,16 +22,16 @@
                             <div>
                                 <div class="fw-bold mb-1" style="color: #155724; font-size: 1.5rem;">Bedankt voor je
                                     bericht!</div>
-                                <div style="color: #155724; font-size: 1.1rem;">We hebben je aanvraag goed ontvangen.</div>
+                                <div style="color: #155724; font-size: 1.1rem;">Ik heb je aanvraag goed ontvangen.</div>
                             </div>
                         </div>
                         <div class="text-center" style="color: #155724;">
-                            <p class="mb-2">we nemen zo snel mogelijk contact met je op.<br>
+                            <p class="mb-2">Ik neem zo snel mogelijk contact met je op.<br>
                                 Je ontvangt binnen 24 uur een reactie per e-mail of telefoon.</p>
                             <a href="tel:+31619666642" class="btn btn-outline-success btn-sm me-2"
-                                style="font-weight: 500;">Bel ons</a>
+                                style="font-weight: 500;">Bel mij</a>
                             <a href="mailto:info@rijschoolsnelenveilig.nl" class="btn btn-outline-success btn-sm"
-                                style="font-weight: 500;">Mail ons</a>
+                                style="font-weight: 500;">Mail mij</a>
                         </div>
                     </div>
                 </div>
@@ -42,13 +42,13 @@
                 <h1 style="color: #f8f9fa;">Contact</h1>
                 <p style="font-size: 1.1rem; color: #f8f9fa; margin-top: 10px;">
                     Neem contact op voor een gratis proefles of meer informatie.<br>
-                    Wij reageren snel op je aanvraag!
+                    Ik reageer snel op je aanvraag!
                 </p>
                 <p>
                     <b>Bel:</b> <a href="tel:+31619666642"
                         style="white-space: nowrap; color: rgb(0, 140, 255); text-decoration: none;"><b>+31 6
                             19666642</b></a><br>
-                    <b>of mail:</b> <a href="mailto:info@rijschoolsnelenveilig.nl"
+                    <b>Of mail:</b> <a href="mailto:info@rijschoolsnelenveilig.nl"
                         style="color: rgb(0, 140, 255); text-decoration: none;">info@rijschoolsnelenveilig.nl</a>
                 </p>
             </div>
@@ -79,7 +79,7 @@
                     </div>
                     <div class="form-group mb-3">
                         <label for="email">E-mail</label>
-                        <input type="email" class="form-control" id="email" name="email" required
+                        <input type="email" pattern="^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,24}$" class="form-control" id="email" name="email" required
                             value="{{ old('email') }}">
                         @error('email')
                             <div class="text-danger small mt-1">{{ $message }}</div>
@@ -87,7 +87,8 @@
                     </div>
                     <div class="form-group mb-3">
                         <label for="telefoon">Telefoonnummer <small>!optioneel</small></label>
-                        <input type="tel" class="form-control" id="telefoon" name="telefoon"
+                        <input type="tel" pattern="^(\+31|0)(6\d{8}|[1-9]\d{8})$"
+                                 class="form-control" id="telefoon" name="telefoon"
                             value="{{ old('telefoon') }}">
                         @error('telefoon')
                             <div class="text-danger small mt-1">Geen geldig telefoonnummer formaat</div>
@@ -127,7 +128,7 @@
                 <h3 class="bold">Contactgegevens</h3>
                 <p>
                     <b>Rijschool Snel & Veilig</b><br>
-                    Amsterdam, Amstelveen, Hoofddorp, Nieuw-Vennep, Haarlem, Zandvoort<br>
+                    Amsterdam, Amstelveen, Haarlem, Hoofddorp<br>
                     <br>
                     <b>Telefoon:</b> <a href="tel:+31619666642" style="color: rgb(0, 140, 255); text-decoration: none;">+31
                         6 19666642</a><br>

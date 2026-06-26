@@ -24,10 +24,10 @@ class MailController extends Controller
         }
 
         // Mail versturen
-        Mail::to('wesleyborgman@gmail.com')->send(new ContactMail($data));
+        Mail::to('info@rijschoolsnelenveilig.nl')->send(new ContactMail($data));
 
-        // Throttle instellen (bijv. 300 seconden = 5 minuten)
-        $cooldownSeconds = 300;
+        // Throttle instellen
+        $cooldownSeconds = 120;
         $ip = $request->ip();
 
         // Expiratietijd berekenen
