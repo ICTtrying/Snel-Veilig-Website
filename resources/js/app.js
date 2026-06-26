@@ -1,4 +1,5 @@
-import './bootstrap';
+import './bootstrap'; // Laravel bootstrap file (Axios, Echo etc.)
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 document.addEventListener('DOMContentLoaded', function () {
   const hiddenSections = document.querySelectorAll('.hidden');

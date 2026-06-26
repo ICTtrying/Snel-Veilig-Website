@@ -12,11 +12,36 @@ body {
 
 html {
     scrollbar-gutter: stable;
-}
-
-html {
     overflow-x: hidden;
 }
+
+.my-swiper {
+    width: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* vaste hoogte voor alle slides */
+}
+
+.swiper-slide-img {
+    width: 100%;
+    height: 100%;       /* vult de slide volledig */
+    object-fit: cover;  /* bijsnijden zodat het netjes past */
+    border-radius: 6px;
+}
+
+/* tablet/desktop hogere afbeeldingen */
+@media (min-width: 576px) {
+    .swiper-slide-img { height: 240px; }
+}
+@media (min-width: 768px) {
+    .swiper-slide-img { height: 300px; }
+}
+
+
 
 hr {
     border: none;
@@ -236,6 +261,7 @@ nav div {
     padding-right: clamp(4px, 10vw, 200px);
     margin-bottom: 1px;
     background-color: rgb(42, 42, 42);
+    overflow-x: hidden;
 }
 
 .section3 .row {
@@ -354,21 +380,22 @@ nav div {
     position: relative;
 }
 
-/*overOns html css*/
-.card-review {
-    font-family: "Georgia", serif;
-    /* mooi font met echte quotes */
+.laststar {
+    position: relative;
+    display: inline-block;
+    /* nodig voor absolute positioning van ::after */
 }
 
-.card-review::after {
+.laststar::after {
+    font-family: "Georgia", serif;
     content: "\201C";
-    /* openende dubbele quote */
+    /* hier staat nu een quote */
     color: #007bff;
-    /* blauw */
     font-size: 8rem;
     position: absolute;
-    right: 10px;
-    top: 230px;
+    bottom: 0;
+    transform: translateY(58%);
+    right: clamp(-90px, -20vw, -10px);
 }
 
 .darkOverlay-overons {
