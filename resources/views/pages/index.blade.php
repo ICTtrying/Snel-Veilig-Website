@@ -49,7 +49,7 @@
 
     <section class="section2 pb-5 pt-5 bg-dark">
         <div class="container slide-left-animate hidden">
-            <h2>Leren op examenwegen!!!!</h2>
+            <h2>Leren op examenwegen!</h2>
             <small class="mt-5">Over Snel & Veilig</small>
             <hr>
             <br>
@@ -70,7 +70,7 @@
                     </p>
 
                     <p>
-                        vragen? Bel naar: <a href="tel:+31619666642"
+                        Vragen? Bel naar: <a href="tel:+31619666642"
                             style="white-space: nowrap; color: rgb(0, 140, 255); text-decoration: none;"><b>+31 6
                                 19666642</b></a>
                         <br>
