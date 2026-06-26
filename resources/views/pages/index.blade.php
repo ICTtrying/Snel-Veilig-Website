@@ -345,17 +345,77 @@
 </section>
 
 <style>
-/* vaste afmetingen en nette bijsnijding */
-.student-img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  object-position: 50% 25%;
-  display: block;
-  border-radius: 6px;
+.geslaagden-section {
+  padding: 3rem 1rem 4rem;
 }
 
-/* slide row: flex container met gap */
+.geslaagden-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.geslaagden-title {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.geslaagden-subtitle {
+  color: #90caf9;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* student card */
+.student-card {
+  flex: 0 0 calc((100% - ((var(--ips) - 1) * var(--gap))) / var(--ips));
+  max-width: 380px;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+}
+
+.student-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: 50% 20%;
+  display: block;
+}
+
+.student-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.6rem 0.8rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.student-card-badge {
+  background: #f59e0b;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 50px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* slide row */
 .slide-row {
   display: flex;
   gap: 1rem;
@@ -365,54 +425,88 @@
   box-sizing: border-box;
 }
 
-/* --ips wordt door JS gezet (aantal items per slide) */
-.carousel-inner {
+/* carousel */
+.geslaagden-carousel .carousel-inner {
   --ips: 1;
   --gap: 1rem;
 }
 
-/* student-card: flex-basis berekend aan de hand van --ips en --gap */
-.student-card {
-  flex: 0 0 calc((100% - ((var(--ips) - 1) * var(--gap))) / var(--ips));
-  max-width: 360px;
-  box-sizing: border-box;
+.geslaagden-carousel .carousel-item {
+  transition: transform 0.55s ease;
 }
 
-/* kleine visuele smoothing */
-.carousel-inner .carousel-item {
-  transition: transform 0.6s ease;
-}
-
-/* arrows */
-.carousel-control-prev,
-.carousel-control-next {
-  width: 3.5rem;
-  height: 3.5rem;
+/* pijlen */
+.geslaagden-carousel .carousel-control-prev,
+.geslaagden-carousel .carousel-control-next {
+  width: 3rem;
+  height: 3rem;
   top: 50%;
   transform: translateY(-50%);
+  background: rgba(255,255,255,0.12);
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(4px);
+  transition: background 0.2s;
+}
+
+.geslaagden-carousel .carousel-control-prev:hover,
+.geslaagden-carousel .carousel-control-next:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* dot indicators */
+.geslaagden-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 1.5rem;
+}
+
+.geslaagden-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.geslaagden-dot.active {
+  background: #f59e0b;
+  transform: scale(1.3);
 }
 </style>
 
-<div class="container py-4">
-  <div id="studentsCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <!-- slides worden door JS opgebouwd -->
+<section class="geslaagden-section bg-dark">
+  <div class="geslaagden-header">
+    <h2 class="geslaagden-title">Geslaagd!</h2>
+    <p class="geslaagden-subtitle">Trots op al onze leerlingen die hun rijbewijs hebben gehaald.</p>
+  </div>
+
+  <div class="container position-relative">
+    <div id="studentsCarousel" class="carousel slide geslaagden-carousel" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- slides worden door JS opgebouwd -->
+      </div>
+
+      <button class="carousel-control-prev" type="button" id="carouselPrev" aria-label="Vorige">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" id="carouselNext" aria-label="Volgende">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
 
-    <button class="carousel-control-prev" type="button" id="carouselPrev" aria-label="Vorige">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" id="carouselNext" aria-label="Volgende">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    <div class="geslaagden-dots" id="carouselDots"></div>
   </div>
-</div>
+</section>
 
-<!-- Safe JS: bouw een array met volledige asset()-urls in PHP en geef die als JSON door -->
+<!-- images als JSON met volledige asset() URLs -->
 <script>
-  // images wordt veilig door Blade ingespoten als JSON met volledige URLs
   const images = @json(array_map(fn($p) => asset($p), $images ?? []));
 </script>
 
@@ -420,8 +514,9 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const carouselEl = document.getElementById('studentsCarousel');
+  const carouselEl   = document.getElementById('studentsCarousel');
   const carouselInner = carouselEl.querySelector('.carousel-inner');
+  const dotsContainer = document.getElementById('carouselDots');
   const prevBtn = document.getElementById('carouselPrev');
   const nextBtn = document.getElementById('carouselNext');
 
@@ -432,31 +527,29 @@ document.addEventListener('DOMContentLoaded', function () {
     return 1;
   }
 
-  // Bouw slides: voor elk origineel beeld een slide die de volgende N-1 beelden laat zien (wrap)
   function buildSlides() {
-    const itemsPerSlide = getItemsPerSlide();
-    carouselInner.style.setProperty('--ips', itemsPerSlide);
+    const ips = getItemsPerSlide();
+    carouselInner.style.setProperty('--ips', ips);
     carouselInner.style.setProperty('--gap', '1rem');
 
-    // edge: geen images => fallback
     if (!images || !images.length) {
       carouselInner.innerHTML = '<div class="carousel-item active"><div class="slide-row"><div class="student-card"><img class="student-img" src="" alt="geen afbeelding"></div></div></div>';
+      dotsContainer.innerHTML = '';
       return;
     }
 
-    // Voor elk origineel beeld maak 1 slide met itemsPerSlide items (wrapped)
     const slides = [];
-    for (let start = 0; start < images.length; start++) {
+    for (let start = 0; start < images.length; start += ips) {
       const chunk = [];
-      for (let j = 0; j < itemsPerSlide; j++) {
-        const idx = (start + j) % images.length;
-        chunk.push(images[idx]);
+      for (let j = 0; j < ips; j++) {
+        chunk.push(images[(start + j) % images.length]);
       }
       slides.push(chunk);
     }
 
-    // DOM opbouwen: slides zijn nu images.length in aantal
     carouselInner.innerHTML = '';
+    dotsContainer.innerHTML = '';
+
     slides.forEach((chunk, sIndex) => {
       const item = document.createElement('div');
       item.className = 'carousel-item' + (sIndex === 0 ? ' active' : '');
@@ -472,35 +565,54 @@ document.addEventListener('DOMContentLoaded', function () {
         img.className = 'student-img';
         img.loading = 'lazy';
         img.src = src || '';
+        img.alt = 'Geslaagde leerling';
         card.appendChild(img);
+
+        const overlay = document.createElement('div');
+        overlay.className = 'student-card-overlay';
+        const badge = document.createElement('span');
+        badge.className = 'student-card-badge';
+        badge.textContent = 'Geslaagd!';
+        overlay.appendChild(badge);
+        card.appendChild(overlay);
+
         row.appendChild(card);
       });
 
       item.appendChild(row);
       carouselInner.appendChild(item);
+
+      // dot
+      const dot = document.createElement('button');
+      dot.className = 'geslaagden-dot' + (sIndex === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Ga naar slide ' + (sIndex + 1));
+      dot.addEventListener('click', () => bsCarousel.to(sIndex));
+      dotsContainer.appendChild(dot);
     });
   }
 
-  // init
+  function updateDots(activeIndex) {
+    dotsContainer.querySelectorAll('.geslaagden-dot').forEach((dot, i) => {
+      dot.classList.toggle('active', i === activeIndex);
+    });
+  }
+
   buildSlides();
+
   let bsCarousel = new bootstrap.Carousel(carouselEl, {
-    interval: 3000,
-    ride: 'carousel',   // autoplay weer aan
+    interval: 3500,
+    ride: 'carousel',
     pause: 'hover',
     wrap: true
   });
 
-  // Prev/Next: gebruik built-in prev/next — slide bevat meerdere kaarten
-  prevBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    bsCarousel.prev();
-  });
-  nextBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    bsCarousel.next();
+  carouselEl.addEventListener('slid.bs.carousel', function (e) {
+    updateDots(e.to);
   });
 
-  // Rebuild alleen wanneer breakpoint verandert (debounced)
+  prevBtn.addEventListener('click', e => { e.preventDefault(); bsCarousel.prev(); });
+  nextBtn.addEventListener('click', e => { e.preventDefault(); bsCarousel.next(); });
+
   let lastIps = getItemsPerSlide();
   let resizeTimer;
   window.addEventListener('resize', function () {
@@ -512,10 +624,13 @@ document.addEventListener('DOMContentLoaded', function () {
         bsCarousel.dispose();
         buildSlides();
         bsCarousel = new bootstrap.Carousel(carouselEl, {
-          interval: 3000,
+          interval: 3500,
           ride: 'carousel',
           pause: 'hover',
           wrap: true
+        });
+        carouselEl.addEventListener('slid.bs.carousel', function (e) {
+          updateDots(e.to);
         });
       }
     }, 150);

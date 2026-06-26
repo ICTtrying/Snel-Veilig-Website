@@ -8,15 +8,17 @@ class RouteController
 {
     public function index() {
         $images = [
-        'images/leerlingen/leerling1.jpeg',
-        'images/leerlingen/leerling2.jpeg',
-        'images/leerlingen/leerling3.jpeg',
-        'images/leerlingen/leerling4.jpeg',
-        'images/leerlingen/leerling5.jpeg',
-        'images/leerlingen/leerling6.jpeg',
-        'images/leerlingen/leerling7.jpeg',
-        'images/leerlingen/leerling8.jpeg',
-    ];
+            'images/leerlingen/leerling1.jpeg',
+            'images/leerlingen/leerling2.jpeg',
+            'images/leerlingen/leerling3.jpeg',
+            'images/leerlingen/leerling4.jpeg',
+            'images/leerlingen/leerling5.jpeg',
+            'images/leerlingen/leerling6.jpeg',
+            'images/leerlingen/leerling7.jpeg',
+            'images/leerlingen/leerling8.jpeg',
+            'images/leerlingen/leerling9.jpeg',
+            'images/leerlingen/leerling10.jpeg',
+        ];
         return view('pages.index', compact('images'));
     }
 
