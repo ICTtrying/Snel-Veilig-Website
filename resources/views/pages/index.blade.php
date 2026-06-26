@@ -16,7 +16,7 @@
             <a href="{{ route('contact.index') }}" class="linkButton" role="button">Gratis proefles!</a>
 
             <div class="mt-4">
-                <p class="mb-0">vragen? bel naar:
+                <p class="mb-0">vragen? Bel naar:
                     <a href="tel:+31619666642" style="white-space:nowrap; color: rgb(0,140,255); text-decoration:none;">
                         <strong>+31 6 19666642</strong>
                     </a>
