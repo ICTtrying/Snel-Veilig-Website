@@ -18,6 +18,7 @@ class RouteController
             'images/leerlingen/leerling8.jpeg',
             'images/leerlingen/leerling9.jpeg',
             'images/leerlingen/leerling10.jpeg',
+            'images/leerlingen/leerling11.jpeg',
         ];
         return view('pages.index', compact('images'));
     }
